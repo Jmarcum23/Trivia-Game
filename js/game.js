@@ -76,13 +76,15 @@ function showQuestions(){
 function showResults() {
 	var userAnswer = '';
 	for(var i = 0; i < myQuestions.length; i++){	
-		userAnswer =  $('input[type="radio"]').value;
-		if(userAnswer === myQuestions[i].correctAnswer){
-		correctAnswers++;
+		userAnswer =  $('input[name="radio' + i + '"]:checked').val();
+		console.log(userAnswer, myQuestions[i].correctAnswer, correctAnswers);
+		if(userAnswer == myQuestions[i].correctAnswer){
+			correctAnswers++;
 		}
 	}
 	$('#score').html(correctAnswers + ' out of ' + myQuestions.length + ' correct');
 }
+
 
 
 
@@ -138,10 +140,10 @@ var quiz= {
   stop: function(){
     clearInterval(intervalId);
     clockRunning = false;
+    showResults();
     $('#quiz').remove();
     $('#submit').remove();
     $('#start').remove();
-    showResults();
     },
 };
 
