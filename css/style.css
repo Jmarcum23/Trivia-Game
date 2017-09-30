@@ -1,0 +1,52 @@
+body {
+	background: #242776;
+	color: #fff;
+	font-family: sans-serif;
+}
+
+h1{
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+header {
+	max-height: 600px;
+	overflow: hidden;
+}
+
+li {
+	display: inline-block;
+	list-style: none;
+	padding: 20px;
+	font-size: 18px;
+}
+#start, #submit {
+	background: #f8b425;
+	border: none;
+	border-radius: 10px;
+	padding: 15px;
+	width: 200px;
+	margin-top: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 20px;
+}
+.one, .two{
+	text-align: center;
+	margin-top: 40px;
+}
+
+input[type=radio] {	
+	margin-right:10px;
+}
+
+#display {
+	font-size: 34px;
+}
+
+
+footer {
+	min-height: 200px;
+}
+
+
